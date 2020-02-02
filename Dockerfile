@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 # Prepare the system
 RUN apt-get update && \
-    apt-get install -y curl nano software-properties-common gnupg2 lsb-release openjdk-8-jre python3 && \
+    apt-get install -y curl nano git openjdk-8-jre python3 software-properties-common gnupg2 lsb-release && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -

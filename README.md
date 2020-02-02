@@ -6,6 +6,7 @@ This image contains the following things:
 
 - Based on Ubuntu Image
 - Nano
+- Git Client
 - Java
 - Python3
 - Docker CLI
