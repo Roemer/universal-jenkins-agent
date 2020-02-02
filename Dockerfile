@@ -22,4 +22,5 @@ ENV JENKINS_URL="http://localhost:8080"
 ENV JENKINS_AGENT_NAME="agent-01"
 ENV JENKINS_AGENT_SECRET="1234"
 ADD start-agent.sh /
+RUN ["chmod", "+x", "/start-agent.sh"]
 CMD ./start-agent.sh
