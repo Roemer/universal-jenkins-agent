@@ -7,11 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: roemer/universal-jenkins-agent:latest
 
     steps:
     - uses: actions/checkout@v3
     - name: Docker Build
-      run: docker build . --file Dockerfile --tag universal-jenkins-agent:latest
+      run: docker build . --file Dockerfile --tag $IMAGE_NAME
     - name: Docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
