@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz && \
     tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz && \
     export PATH=$PATH:/usr/local/go/bin && \
-    rm go1.21.1.linux-amd64.tar.gz
+    rm go1.22.5.linux-amd64.tar.gz
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
