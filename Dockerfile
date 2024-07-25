@@ -5,12 +5,12 @@ ENV TZ=Europe/Zurich
 
 # Prepare the system
 RUN apt-get update && \
-    apt-get install -y curl wget nano git openjdk-11-jre python3 software-properties-common gnupg2 lsb-release sshpass && \
+    apt-get install -y curl wget nano git openjdk-21-jre python3 software-properties-common gnupg2 lsb-release sshpass && \
     rm -rf /var/lib/apt/lists/*
 
 # Install GoLang
-RUN wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz && \
+RUN wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz && \
     export PATH=$PATH:/usr/local/go/bin && \
     rm go1.21.1.linux-amd64.tar.gz
 
