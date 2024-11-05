@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Zurich
@@ -9,10 +9,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install GoLang
-RUN wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz && \
+RUN wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz && \
     export PATH=$PATH:/usr/local/go/bin && \
-    rm go1.22.5.linux-amd64.tar.gz
+    rm go1.23.2.linux-amd64.tar.gz
 
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
